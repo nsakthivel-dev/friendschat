@@ -14,7 +14,7 @@ pnpm dev
 
 The HTTP API defaults to `http://localhost:4000`; `GET /health` is unauthenticated.
 Register/login returns a JWT. Send it as `Authorization: Bearer <token>` and as
-`socket.io` auth `{ token }`. Socket events include `message:new`, `typing`,
+Socket.IO auth `{ token }`. Socket events include `message:new`, `typing`,
 `receipt:update`, and `reaction:update`; clients join rooms with
 `conversation:join`.
 
@@ -23,6 +23,6 @@ Set `REDIS_URL` for production/multiple API instances. S3-compatible attachment
 configuration is exposed through `S3_*`; the adapter is intentionally a small
 provider seam so deployments can plug in their preferred SDK/bucket policy.
 
-For production use a PostgreSQL datasource in `schema.prisma`, a strong
-`JWT_SECRET`, HTTPS, restrictive `WEB_ORIGIN`, and an S3-compatible upload
-implementation with signed URLs.
+For production use a PostgreSQL datasource, a strong `JWT_SECRET`, HTTPS,
+restrictive `WEB_ORIGIN`, and an S3-compatible upload implementation with signed
+URLs.

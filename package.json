@@ -3,8 +3,8 @@
   "private": true,
   "packageManager": "pnpm@9.15.0",
   "scripts": {
-    "dev": "pnpm --filter @friendschat/api dev",
-    "build": "pnpm --filter @friendschat/api build",
+    "dev": "pnpm --parallel --filter @friendschat/api --filter @friendschat/web dev",
+    "build": "pnpm --recursive build",
     "test": "pnpm --filter @friendschat/api test",
     "db:generate": "pnpm --filter @friendschat/api prisma:generate"
   }

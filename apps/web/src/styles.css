@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base { * { @apply border-slate-200; } body { @apply m-0 bg-mist font-sans text-ink antialiased; } }
+@layer components {
+  .field { @apply w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none transition placeholder:text-slate-400 focus:border-lavender focus:ring-4 focus:ring-violet-100; }
+  .primary { @apply inline-flex items-center justify-center gap-2 rounded-xl bg-lavender px-4 py-3 text-sm font-semibold text-white transition hover:bg-violet-700 disabled:opacity-50; }
+  .icon-btn { @apply grid h-10 w-10 place-items-center rounded-xl text-slate-500 transition hover:bg-slate-100 hover:text-ink; }
+}
+.scrollbar-hide::-webkit-scrollbar { display: none; }
+.scrollbar-hide { scrollbar-width: none; }

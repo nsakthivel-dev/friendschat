@@ -1,0 +1,11 @@
+{
+  "name": "friendschat",
+  "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "dev": "pnpm --filter @friendschat/api dev",
+    "build": "pnpm --filter @friendschat/api build",
+    "test": "pnpm --filter @friendschat/api test",
+    "db:generate": "pnpm --filter @friendschat/api prisma:generate"
+  }
+}
